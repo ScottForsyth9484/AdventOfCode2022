@@ -13,8 +13,8 @@ namespace DayOne
 
         }
 
-        static IEnumerable<long> GroupedData (string data) => data.Split("\r\n\r\n").Select(m =>
-                m.Split("\r\n").Select(k => long.Parse(k)).Sum()
+        static IEnumerable<long> GroupedData (string data) => data.Split(Environment.NewLine + Environment.NewLine).Select(m =>
+                m.Split(Environment.NewLine).Select(k => long.Parse(k)).Sum()
             );
     }
 }
