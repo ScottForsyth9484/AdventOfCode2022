@@ -12,10 +12,10 @@
         static IEnumerable<int> Priority(string[] data) => data.Select(m => 
                 new List<IEnumerable<char>>
                     {
-                        m.Take((int)(m.Length / 2)),
-                        m.Skip((int)(m.Length / 2))
+                        m.Take(m.Length / 2),
+                        m.Skip(m.Length / 2)
                     })
-            .Select(k => k[0].Where(c => k[1].Contains(c)).First())
+            .Select(k => k[0].First(c => k[1].Contains(c)))
             .Select(d=> GetValue(d));
 
 
@@ -24,9 +24,7 @@
                 .Select(m => GroupPriority(m))
                 .Sum();             
 
-        static int GroupPriority(string[] data) => GetValue(data[0].First(m => data[1].Contains(m) && data[2].Contains(m)));
-
-        
+        static int GroupPriority(string[] data) => GetValue(data[0].First(m => data[1].Contains(m) && data[2].Contains(m)));        
 
         static int GetValue(char c) => Char.IsLower(c) ? ((int)c) - 96 : ((int)c) - 38;
         
