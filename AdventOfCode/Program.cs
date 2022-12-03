@@ -6,15 +6,12 @@ namespace DayOne
     {
         static void Main(string[] args)
         {
-            IEnumerable<long> data = GroupedData(File.ReadAllText("input.txt"));
 
-            Console.WriteLine($"new max is {data.Max()}");
-            Console.WriteLine($"new top 3 total is {data.OrderByDescending(m=>m).Take(3).Sum()}");
+            string data = File.ReadAllText("input.txt");
+            Challenge challenge = new Challenge();
+            Console.WriteLine($"new max is {challenge.PartOne(data)}");
+            Console.WriteLine($"new top 3 total is {challenge.PartTwo(data)}");
 
         }
-
-        static IEnumerable<long> GroupedData (string data) => data.Split(Environment.NewLine + Environment.NewLine).Select(m =>
-                m.Split(Environment.NewLine).Select(k => long.Parse(k)).Sum()
-            );
     }
 }
