@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayFive", "DayFive\DayFive.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayFiveTests", "DayFiveTests\DayFiveTests.csproj", "{0F541C74-76DF-4533-816B-E68781887937}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DayFiveChallenge", "DayFiveChallenge", "{A152E41E-42A8-4EEA-9EF4-0C55A0A44530}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day5Challenge", "Day5Challenge", "{A152E41E-42A8-4EEA-9EF4-0C55A0A44530}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
