@@ -13,20 +13,20 @@ namespace DayFiveTests
         [Fact]
         public void PartOne()
         {
-            int expected = 0;
+            string expected = "CMZ";
             Challenge uot = new Challenge();
 
-            int actual = uot.PartOne(_data);
+            string actual = uot.PartOne(_data);
             Assert.Equal(expected, actual);
         }
 
         [Fact]
         public void PartTwo()
         {
-            int expected = 0;
+            string expected = "MCD";
             Challenge uot = new Challenge();
 
-            int actual = uot.PartTwo(_data);
+            string actual = uot.PartTwo(_data);
             Assert.Equal(expected, actual);
         }
     }
