@@ -37,7 +37,7 @@ namespace DayFive
         Stack<string>[] GetStacks(string data)
         {
             var rows = data.Replace("    ", " [@]").Replace("][","] [").Replace("[","").Replace("]","").Split(Environment.NewLine);
-            int maxStacks = rows.Where(m => m.StartsWith(" 1")).First().Select(m => Char.IsNumber(m) ? int.Parse(m.ToString()) : 0).Max();
+            int maxStacks = rows.First(m => m.StartsWith(" 1")).Select(m => Char.IsNumber(m) ? int.Parse(m.ToString()) : 0).Max();
             Stack<string>[] stacks= new Stack<string>[maxStacks];
             rows.ToList().ForEach(m =>
             {
