@@ -17,12 +17,24 @@ namespace DaySeven
         string _currentPath = "";
         public long PartOne(string data)
         {
-            string[] inputs = data.Split(Environment.NewLine);
             
+            ProcessData(data);
+            return _directories.Where(m=>m.RecordType == RecordType.Directory && m.Size <= 100000).Sum(m => m.Size);
+
+
+        }
+
+        void ProcessData(string data)
+        {
+            if (_directories.Any())
+            {
+                return;
+            }
+            string[] inputs = data.Split(Environment.NewLine);
 
             foreach (var input in inputs)
             {
-                switch (input.Substring(0,3))
+                switch (input.Substring(0, 3))
                 {
                     case "$ c": ChangeDirectory(input); break;
                     case "$ l": break;
@@ -30,41 +42,15 @@ namespace DaySeven
                 }
             }
 
-            foreach(var dir in _directories.Where(m=>m.RecordType == RecordType.Directory).OrderByDescending(m=>m.Path.Length).ToList())
+            foreach (var dir in _directories.Where(m => m.RecordType == RecordType.Directory).ToList())
             {
                 dir.Size = _directories.Where(m => m.Path.StartsWith(dir.Path) && m.RecordType == RecordType.File).Sum(m => m.Size);
             }
-
-            _directories.ForEach(m => Console.WriteLine(m.ToString()));
-            //return _directories.Where(m => m.RecordType == RecordType.File).Sum(m => m.Size);
-
-            return _directories.Where(m=>m.RecordType == RecordType.Directory && m.Size <= 100000).Sum(m => m.Size);
-
-
         }
 
         public long PartTwo(string data)
         {
-            if (!_directories.Any())
-            {
-                string[] inputs = data.Split(Environment.NewLine);
-
-
-                foreach (var input in inputs)
-                {
-                    switch (input.Substring(0, 3))
-                    {
-                        case "$ c": ChangeDirectory(input); break;
-                        case "$ l": break;
-                        default: AddRecord(input); break;
-                    }
-                }
-
-                foreach (var dir in _directories.Where(m => m.RecordType == RecordType.Directory).OrderByDescending(m => m.Path.Length).ToList())
-                {
-                    dir.Size = _directories.Where(m => m.Path.StartsWith(dir.Path) && m.RecordType == RecordType.File).Sum(m => m.Size);
-                }
-            }
+            ProcessData(data);
 
             long maxSpace = 70000000;
             long minSpace = 30000000;
@@ -79,7 +65,6 @@ namespace DaySeven
         void AddRecord(string input)
         {
             DirectoryRecord record;
-           // string currentPath = _directories.FirstOrDefault(m => m.Name == _currentDir)?.Path;
             string[] inputParts = input.Split(" ");
             string path = string.Join('/', _currentDir, inputParts[1]);
             if (input.StartsWith("dir"))
@@ -99,7 +84,6 @@ namespace DaySeven
             string[] data = input.Split(" ");
             if (data[2] == "..")
             {
-                //var currentPath = _directories.First(m => m.Name == _currentDir).Path;
                 var newPath = TraverseUpPath(_currentDir);
                 if (newPath == "/")
                 {
@@ -110,13 +94,13 @@ namespace DaySeven
             else
             {
                 var path = string.Join('/', _currentDir, data[2]);
-                DirectoryRecord dir = _directories.FirstOrDefault(m => m.Name == path);
+                DirectoryRecord? dir = _directories.FirstOrDefault(m => m.Name == path);
                 if (dir == null)
                 {
                     dir = new DirectoryRecord(RecordType.Directory, 0, string.Join('/', _currentDir, data[2]), string.Join('/', _currentDir, data[2]));
                     _directories.Add(dir);
                 }
-                _currentDir = dir.Path;// data[2];
+                _currentDir = dir.Path;
             }
         }
          
