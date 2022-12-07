@@ -9,24 +9,23 @@ namespace DaySevenTests
         {
             _data = File.ReadAllText("./TestData/testInput.txt");
         }
-        [Theory]
-        [InlineData(7, "mjqjpqmgbljsphdztnvjfqwrcgsmlb")]
-        public void PartOne(int expected, string value)
+        [Fact]
+        public void PartOne()
         {
-
+            long expected = 95437;
             Challenge uot = new Challenge();
 
-            int actual = uot.PartOne(value);
+            long actual = uot.PartOne(_data);
             Assert.Equal(expected, actual);
         }
 
-        [Theory]
-        [InlineData(19, "mjqjpqmgbljsphdztnvjfqwrcgsmlb")]
-        public void PartTwo(int expected, string value)
+        [Fact]
+        public void PartTwo()
         {
+            long expected = 24933642;
             Challenge uot = new Challenge();
 
-            int actual = uot.PartTwo(value);
+            long actual = uot.PartTwo(_data);
             Assert.Equal(expected, actual);
         }
     }

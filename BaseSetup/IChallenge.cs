@@ -17,4 +17,10 @@ namespace BaseSetup
         public string PartOne(string data);
         public string PartTwo(string data);
     }
+
+    public interface IChallenge3
+    {
+        public long PartOne(string data);
+        public long PartTwo(string data);
+    }
 }
