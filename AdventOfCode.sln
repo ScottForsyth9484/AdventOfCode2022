@@ -47,29 +47,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day7Challenge", "Day7Challe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaySevenTests", "DaySevenTests\DaySevenTests.csproj", "{45431B0F-2C3C-4B66-BE27-0E7A37BE7B41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayEight", "DayEight\DayEight.csproj", "{5D77BA95-FDEE-4588-BB1E-FC0D7B4CF33F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayEight", "DayEight\DayEight.csproj", "{5D77BA95-FDEE-4588-BB1E-FC0D7B4CF33F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayEightTests", "DayEightTests\DayEightTests.csproj", "{6DFB8B4D-81C1-4CEC-A98D-116DA964C90E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayEightTests", "DayEightTests\DayEightTests.csproj", "{6DFB8B4D-81C1-4CEC-A98D-116DA964C90E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day8Challenge", "Day8Challenge", "{C4CF8630-1CE0-4AFB-A7DC-EC15705131D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayNine", "DayNine\DayNine.csproj", "{ED4FE52E-1AD7-4082-B51F-F6A4337D44A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayNine", "DayNine\DayNine.csproj", "{ED4FE52E-1AD7-4082-B51F-F6A4337D44A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayNineTests", "DayNineTests\DayNineTests.csproj", "{FC8170AB-3DCB-4059-8059-569500C6F71B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayNineTests", "DayNineTests\DayNineTests.csproj", "{FC8170AB-3DCB-4059-8059-569500C6F71B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day9Challenge", "Day9Challenge", "{531ECE97-34E2-40A8-908A-B55C7E1EE9DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTen", "Day10\DayTen.csproj", "{BB5364F5-59B1-47EB-A2FB-B7EA3CD8A085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTen", "Day10\DayTen.csproj", "{BB5364F5-59B1-47EB-A2FB-B7EA3CD8A085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTenTests", "DayTenTests\DayTenTests.csproj", "{4D9B3732-DD42-4B89-94C7-623698370DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTenTests", "DayTenTests\DayTenTests.csproj", "{4D9B3732-DD42-4B89-94C7-623698370DCD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day10Challenge", "Day10Challenge", "{B8F5719B-EE1A-460F-81F4-B18F24373B7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayEleven", "DayTen\DayEleven.csproj", "{DED16966-63C5-4D7D-9AF3-59E342066F55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayEleven", "DayTen\DayEleven.csproj", "{DED16966-63C5-4D7D-9AF3-59E342066F55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayElevenTests", "DayElevenTests\DayElevenTests.csproj", "{88A4A45F-5FA6-41F2-A1F6-D7432BC742EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayElevenTests", "DayElevenTests\DayElevenTests.csproj", "{88A4A45F-5FA6-41F2-A1F6-D7432BC742EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Day11Challenge", "Day11Challenge", "{C7854901-BB89-4DE3-9850-082197ECBC0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTwelve", "Day12\DayTwelve.csproj", "{A2C3D6BE-958D-4C35-9175-E25D5C4F677F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayTwelveTests", "DayTwelveTests\DayTwelveTests.csproj", "{1FC38F36-D064-4F57-9730-77C714E61D15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -169,6 +173,14 @@ Global
 		{88A4A45F-5FA6-41F2-A1F6-D7432BC742EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88A4A45F-5FA6-41F2-A1F6-D7432BC742EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88A4A45F-5FA6-41F2-A1F6-D7432BC742EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C3D6BE-958D-4C35-9175-E25D5C4F677F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C3D6BE-958D-4C35-9175-E25D5C4F677F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C3D6BE-958D-4C35-9175-E25D5C4F677F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C3D6BE-958D-4C35-9175-E25D5C4F677F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC38F36-D064-4F57-9730-77C714E61D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC38F36-D064-4F57-9730-77C714E61D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC38F36-D064-4F57-9730-77C714E61D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC38F36-D064-4F57-9730-77C714E61D15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
